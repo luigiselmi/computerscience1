@@ -10,7 +10,7 @@ can organize the folder as with Maven, with a *target* folder and a *classes* su
 $ mkdir -p target/classes 
 ```
 In order to compile the Java code you need the [algs4.jar](https://algs4.cs.princeton.edu/code/) Java library to be added to the classpath. In 
-the example the library is in the *lib* folder. Since the Java compiler cannot find recursively all the Java files by itself, you need to add a 
+the example the library is in the *lib* folder. Since the Java compiler cannot find recursively all the Java files by itself, you need to use a 
 bash *find* command
 
 ```
