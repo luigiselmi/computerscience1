@@ -26,3 +26,17 @@ $ java -cp "lib/algs4.jar;target/classes" examples.week1.cs1.PlotFilter < resour
 
 executes the PlotFilter Java class, in the examples.week1.cs1 package, that takes in input a stream from a file containing 
 the coordinates of 13,509 cities in the United States.
+
+### Compile and execute using Maven
+Since the software follows the Maven conventions it can be compiled and executed using Maven
+
+```
+$ mvn compile
+```
+
+When the command returns, a new *target* folder is created, as Maven's convention, with a sub-folder *classes* containing all the compiled java 
+classes. The previous example can be executed using Maven as follows
+
+```
+$ mvn exec:java -Dexec.mainClass="examples.week1.cs1.PlotFilter" < resources/data/USA.txt
+```
