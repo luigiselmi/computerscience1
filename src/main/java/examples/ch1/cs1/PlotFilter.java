@@ -1,4 +1,4 @@
-package examples.week1.cs1;
+package examples.ch1.cs1;
 
 
 import edu.princeton.cs.algs4.StdDraw;
