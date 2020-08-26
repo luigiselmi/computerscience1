@@ -1,0 +1,725 @@
+See the Assessment Guide for information on how to interpret this report.
+
+ASSESSMENT SUMMARY
+
+Compilation:  PASSED
+API:          PASSED
+
+Spotbugs:     PASSED
+PMD:          PASSED
+Checkstyle:   FAILED (0 errors, 3 warnings)
+
+Correctness:  32/37 tests passed
+Memory:       No tests available for autograding.
+Timing:       No tests available for autograding.
+
+Aggregate score: 87.84%
+[ Compilation: 5%, API: 5%, Style: 0%, Correctness: 90% ]
+
+ASSESSMENT DETAILS
+
+The following files were submitted:
+----------------------------------
+ 728 Aug 26 10:30 CMYKtoRGB.java
+ 863 Aug 26 10:30 GreatCircle.java
+ 231 Aug 26 10:30 HelloGoodbye.java
+ 132 Aug 26 10:30 HelloWorld.java
+ 718 Aug 26 10:30 RightTriangle.java
+
+
+********************************************************************************
+*  COMPILING                                                                    
+********************************************************************************
+
+
+% javac HelloWorld.java
+*-----------------------------------------------------------
+
+% javac HelloGoodbye.java
+*-----------------------------------------------------------
+
+% javac RightTriangle.java
+*-----------------------------------------------------------
+
+% javac GreatCircle.java
+*-----------------------------------------------------------
+
+% javac CMYKtoRGB.java
+*-----------------------------------------------------------
+
+
+================================================================
+
+
+Checking the APIs of your programs.
+*-----------------------------------------------------------
+HelloWorld:
+
+HelloGoodbye:
+
+RightTriangle:
+
+GreatCircle:
+
+CMYKtoRGB:
+
+================================================================
+
+
+********************************************************************************
+*  CHECKING STYLE AND COMMON BUG PATTERNS                                       
+********************************************************************************
+
+
+% spotbugs *.class
+*-----------------------------------------------------------
+
+
+================================================================
+
+
+% pmd .
+*-----------------------------------------------------------
+
+
+================================================================
+
+
+% checkstyle *.java
+*-----------------------------------------------------------
+[WARN] RightTriangle.java:5:20: Inner assignments should be avoided. [InnerAssignment]
+[WARN] RightTriangle.java:6:20: Inner assignments should be avoided. [InnerAssignment]
+[WARN] RightTriangle.java:7:20: Inner assignments should be avoided. [InnerAssignment]
+Checkstyle ends with 0 errors and 3 warnings.
+
+% custom checkstyle checks for HelloWorld.java
+*-----------------------------------------------------------
+
+% custom checkstyle checks for HelloGoodbye.java
+*-----------------------------------------------------------
+
+% custom checkstyle checks for RightTriangle.java
+*-----------------------------------------------------------
+
+% custom checkstyle checks for GreatCircle.java
+*-----------------------------------------------------------
+
+% custom checkstyle checks for CMYKtoRGB.java
+*-----------------------------------------------------------
+
+
+================================================================
+
+
+********************************************************************************
+*  TESTING CORRECTNESS
+********************************************************************************
+
+Testing correctness of HelloWorld
+*-----------------------------------------------------------
+Running 2 total tests.
+
+Test 1: check output format
+  % java HelloWorld
+  Hello, World
+
+==> passed
+
+Test 2: check correctness
+  * java HelloWorld
+==> passed
+
+
+HelloWorld Total: 2/2 tests passed!
+
+
+================================================================
+Testing correctness of HelloGoodbye
+*-----------------------------------------------------------
+Running 6 total tests.
+
+Test 1: check output format
+  % java HelloGoodbye Kevin Bob
+  Hello Kevin and Bob.
+  Goodbye Bob and Kevin.
+
+  % java HelloGoodbye Alejandra Bahati
+  Hello Alejandra and Bahati.
+  Goodbye Bahati and Alejandra.
+
+==> passed
+
+Test 2: check correctness using names from assignment specification
+  * java HelloGoodbye Kevin Bob
+  * java HelloGoodbye Alejandra Bahati
+==> passed
+
+Test 3: check correctness using fixed names
+  * java HelloGoodbye Chandra Deshi
+  * java HelloGoodbye Ayşe María
+  * java HelloGoodbye Wayan Taiyeo
+  * java HelloGoodbye Ástfríður Bedřiška
+==> passed
+
+Test 4: check correctness when two names are the same
+  * java HelloGoodbye Turing Turing
+  * java HelloGoodbye Lovelace Lovelace
+  * java HelloGoodbye Hopper Hopper
+  * java HelloGoodbye Knuth Knuth
+==> passed
+
+Test 5: check correctness using random names
+  * java HelloGoodbye Loeky Dmitrie
+  * java HelloGoodbye Balázs Sissi
+  * java HelloGoodbye Aitana Nedelia
+  * java HelloGoodbye Cateno Toshinobu
+  * java HelloGoodbye Schantin Gismonde
+==> passed
+
+Test 6: test correctness using many random names
+  * 10 pairs of random names
+  * 100 pairs of random names
+  * 1000 pairs of random names
+  * 10000 pairs of random names
+==> passed
+
+
+HelloGoodbye Total: 6/6 tests passed!
+
+
+================================================================
+Testing correctness of RightTriangle
+*-----------------------------------------------------------
+Running 11 total tests.
+
+Test 1: check output format for inputs from assignment specification
+  % java RightTriangle 3 4 5
+  true
+
+  % java RightTriangle 13 12 5
+  true
+
+  % java RightTriangle 1 2 3
+  false
+
+  % java RightTriangle -3 4 -5
+  false
+
+==> passed
+
+Test 2: check correctness of inputs from assignment specification
+  * java RightTriangle 3 4 5
+  * java RightTriangle 13 12 5
+  * java RightTriangle -3 4 -5
+==> passed
+
+Test 3: inputs with a^2 + b^2 = c^2
+  * java RightTriangle 4 3 5
+  * java RightTriangle 5 12 13
+  * java RightTriangle 15 8 17
+  * java RightTriangle 7 24 25
+  * java RightTriangle 20 21 29
+  * java RightTriangle 35 12 37
+  * java RightTriangle 9 40 41
+  * java RightTriangle 28 45 53
+  * java RightTriangle 12 35 37
+  * java RightTriangle 60 11 61
+  * java RightTriangle 16 63 65
+  * java RightTriangle 16 63 65
+  * java RightTriangle 56 35 65
+  * java RightTriangle 55 48 73
+  * java RightTriangle 13 84 85
+  * java RightTriangle 13 84 85
+  * java RightTriangle 36 77 85
+  * java RightTriangle 39 80 89
+  * java RightTriangle 65 72 97
+==> passed
+
+Test 4: inputs with a^2 + c^2 = b^2
+  * java RightTriangle 3 5 4
+  * java RightTriangle 5 13 12
+  * java RightTriangle 8 17 15
+  * java RightTriangle 7 25 24
+  * java RightTriangle 20 29 21
+  * java RightTriangle 12 37 35
+  * java RightTriangle 9 41 40
+  * java RightTriangle 28 53 45
+  * java RightTriangle 12 37 35
+  * java RightTriangle 11 61 60
+==> passed
+
+Test 5: inputs with b^2 + c^2 = a^2
+  * java RightTriangle 5 4 3
+  * java RightTriangle 13 5 12
+  * java RightTriangle 17 15 8
+  * java RightTriangle 25 7 24
+  * java RightTriangle 29 21 20
+  * java RightTriangle 37 12 35
+  * java RightTriangle 41 40 9
+  * java RightTriangle 53 45 28
+  * java RightTriangle 37 12 35
+  * java RightTriangle 61 11 60
+==> passed
+
+Test 6: inputs that are not Pythagorean triples
+  * java RightTriangle 5 5 5
+  * java RightTriangle 3 4 6
+  * java RightTriangle 5 12 14
+==> passed
+
+Test 7: inputs with zeros
+  * java RightTriangle 0 0 1
+  * java RightTriangle 0 0 0
+    - reference output = 'false'
+    - student   output = 'true'
+
+  * java RightTriangle 0 1 1
+    - reference output = 'false'
+    - student   output = 'true'
+
+  * java RightTriangle 0 10 10
+    - reference output = 'false'
+    - student   output = 'true'
+
+==> FAILED
+
+Test 8: inputs with negative values
+  * java RightTriangle 3 4 -5
+  * java RightTriangle -3 4 5
+  * java RightTriangle -3 -4 5
+  * java RightTriangle -3 -4 -5
+  * java RightTriangle -2147483648 -2147483648 -2147483648
+  * java RightTriangle 0 0 -2147483648
+  * java RightTriangle -5 -12 13
+==> passed
+
+Test 9: random Pythagorean triples
+  * 10000 random Pythagorean triples between 1 and 100
+  * 10000 random Pythagorean triples between 1 and 1000
+  * 10000 random Pythagorean triples between 1 and 10000
+==> passed
+
+Test 10: random non-Pythagorean triples
+  * 10000 random non-Pythagorean triples between 1 and 100
+  * 10000 random non-Pythagorean triples between 1 and 1000
+  * 10000 random non-Pythagorean triples between 1 and 10000
+==> passed
+
+Test 11: random Pythagorean triples (large integers)
+  * 10000 random Pythagorean triples between 1 and 100000
+  * 10000 random Pythagorean triples between 1 and 1000000
+  * 10000 random Pythagorean triples between 1 and 10000000
+  * 10000 random Pythagorean triples between 1 and 100000000
+==> passed
+
+Bonus Test: random non-Pythagorean triples with (a*a + b*b == c*c) or
+            (a*a + c*c == b*b) or (b*b + c*c == a*a) due to arithmetic overflow
+  * 50 random overflow Pythagorean triples between 1 and 100000
+    - reference output = 'false'
+    - student   output = 'true'
+    - java RightTriangle 23832 20256 66728
+    - false positive on trial 1 of 50
+
+  * 50 random overflow Pythagorean triples between 1 and 1000000
+    - reference output = 'false'
+    - student   output = 'true'
+    - java RightTriangle 146231 217596 3471
+    - false positive on trial 1 of 50
+
+  * 50 random overflow Pythagorean triples between 1 and 10000000
+    - reference output = 'false'
+    - student   output = 'true'
+    - java RightTriangle 6257840 620049 35473
+    - false positive on trial 1 of 50
+
+  * 50 random overflow Pythagorean triples between 1 and 100000000
+    - reference output = 'false'
+    - student   output = 'true'
+    - java RightTriangle 43872678 42403576 42134
+    - false positive on trial 1 of 50
+
+==> FAILED
+
+
+RightTriangle Total: 10/11 tests passed!
+
+
+================================================================
+Testing correctness of GreatCircle
+*-----------------------------------------------------------
+Running 11 total tests.
+
+Test 1: check output format for points from assignment specification
+  % java GreatCircle 40.35 74.65 48.87 -2.33
+  5902.927099258561 kilometers
+
+  % java GreatCircle 60.0 15.0 120.0 105.0
+  4604.53989281927 kilometers
+
+==> passed
+
+Test 2: check distance for points from assignment specification
+  * java GreatCircle 40.35 74.65 48.87 -2.33
+  * java GreatCircle 60.0 15.0 120.0 105.0
+==> passed
+
+Test 3: check distance for random pairs of cities
+  * Lichinga, Mozambique and Joinville, Brazil
+  * Jackson, United States and Charlotte, United States
+  * Sofia, Bulgaria and Kitami, Japan
+  * Midland, United States and Oviedo, Spain
+  * Tapachula, Mexico and Ekibastuz, Kazakhstan
+  * Gonaïves, Haiti and Shuangcheng, China
+  * Biskra, Algeria and Alicante, Spain
+  * Szczecin, Poland and Linchuan, China
+  * Ploiești, Romania and Tsu, Japan
+  * Arapiraca, Brazil and Sennar, Sudan
+==> passed
+
+Test 4: check distance for corner cases
+  * java GreatCircle 0 0 0 0
+  * java GreatCircle 90 90 90 90
+  * java GreatCircle 0 90 0 -90
+  * java GreatCircle 90 0 -90 0
+  * java GreatCircle 90 90 -90 0
+  * java GreatCircle 90 90 -90 -90
+  * java GreatCircle 0 180 0 0
+  * java GreatCircle 0 180 0 180
+  * java GreatCircle 0 0 0 -180
+==> passed
+
+Test 5: check that distance between (x1, y1) and (x2, y2)
+        equals the distance between (x2, y2) and (x1, y1)
+  * 1000 random points with latitude and longitude in [20.0, 70.0]
+  * 1000 random points with latitude and longitude in [-70.0, -20.0]
+  * 1000 random points with latitude and longitude in [-90.0, 90.0]
+  * 1000 random points with latitude in [-90.0, 90.0] and longitude in [-180.0, 180.0]
+==> passed
+
+Test 6: check that distance between a point and itself is 0
+  * 1000 random points with latitude and longitude [20.0, 70.0]
+  * 1000 random points with latitude and longitude [-70.0, -20.0]
+  * 1000 random points with latitude and longitude [-90.0, 90.0]
+  * 1000 random points with latitude [-90.0, 90.0] and longitude [-180.0, 180.0]
+==> passed
+
+Test 7: check that distance between two antipodal points = pi * radius
+  * 10 random antipodal points
+  * 100 random antipodal points
+  * 1000 random antipodal points
+==> passed
+
+Test 8: check distance of random pairs of cities
+  * 100 random pairs of cities
+  * 1000 random pairs of cities
+  * 10000 random pairs of cities
+==> passed
+
+Test 9: check distance of random pairs of points
+  * 1000 random points with latitude and longitude [20.0, 70.0]
+  * 1000 random points with latitude and longitude [-70.0, -20.0]
+  * 1000 random points with latitude and longitude [-90.0, 90.0]
+  * 1000 random points with latitude [-90.0, 90.0] and longitude [-180.0, 180.0]
+==> passed
+
+Test 10: check distance of random pairs of nearby points
+  * 1000 random pairs of points within 1.000000 kilometers
+  * 1000 random pairs of points within 0.010000 kilometers
+  * 1000 random pairs of points within 0.000100 kilometers
+  * 1000 random pairs of points within 0.000001 kilometers
+==> passed
+
+Test 11: check distance of random pairs of nearly antipodal points
+  * 1000 random pairs of points within 1.000000 kilometers of being antipodal
+  * 1000 random pairs of points within 0.010000 kilometers of being antipodal
+  * 1000 random pairs of points within 0.000100 kilometers of being antipodal
+  * 1000 random pairs of points within 0.000001 kilometers of being antipodal
+==> passed
+
+
+GreatCircle Total: 11/11 tests passed!
+
+
+================================================================
+Testing correctness of CMYKtoRGB
+*-----------------------------------------------------------
+Running 7 total tests.
+
+Test 1: check output format
+  % java CMYKtoRGB 0.0 1.0 0.0 0.0
+  red   = 255
+  green = 0
+  blue  = 255
+
+  % java CMYKtoRGB 0.0 0.4392156862745098 1.0 0.0
+  red   = 255
+  green = 143
+  blue  = 0
+
+==> passed
+
+Test 2: check correctness of inputs from assignment specification
+  * java CMYKtoRGB 0.0 1.0 0.0 0.0
+  * java CMYKtoRGB 0.0 0.4392156862745098 1.0 0.0
+==> passed
+
+Test 3: check various inputs
+  * java CMYKtoRGB 0.18 0.32 0.0 0.29
+    - failed with command-line arguments:
+      0.18 0.32 0.0 0.29
+    - reference output:
+      red   = 148
+      green = 123
+      blue  = 181
+    - student output:
+      red   = 209
+      green = 173
+      blue  = 255
+
+  * java CMYKtoRGB 1.0 0.58 0.0 0.33
+    - failed with command-line arguments:
+      1.0 0.58 0.0 0.33
+    - reference output:
+      red   = 0
+      green = 72
+      blue  = 171
+    - student output:
+      red   = 0
+      green = 107
+      blue  = 255
+
+  * java CMYKtoRGB 0.0 1.0 0.75 0.50
+    - failed with command-line arguments:
+      0.0 1.0 0.75 0.50
+    - reference output:
+      red   = 128
+      green = 0
+      blue  = 32
+    - student output:
+      red   = 255
+      green = 0
+      blue  = 64
+
+  * java CMYKtoRGB 0.0 0.14 0.70 0.15
+    - failed with command-line arguments:
+      0.0 0.14 0.70 0.15
+    - reference output:
+      red   = 217
+      green = 186
+      blue  = 65
+    - student output:
+      red   = 255
+      green = 219
+      blue  = 77
+
+==> FAILED
+
+Test 4: check corner cases
+  * java CMYKtoRGB 0.0 0.0 0.0 0.0
+  * java CMYKtoRGB 1.0 0.0 0.0 0.0
+  * java CMYKtoRGB 0.0 1.0 0.0 0.0
+  * java CMYKtoRGB 0.0 0.0 1.0 0.0
+  * java CMYKtoRGB 0.0 0.0 0.0 1.0
+  * java CMYKtoRGB 1.0 1.0 0.0 0.0
+  * java CMYKtoRGB 1.0 0.0 1.0 0.0
+  * java CMYKtoRGB 1.0 0.0 0.0 1.0
+  * java CMYKtoRGB 0.0 1.0 1.0 0.0
+  * java CMYKtoRGB 0.0 1.0 0.0 1.0
+  * java CMYKtoRGB 0.0 0.0 1.0 1.0
+  * java CMYKtoRGB 1.0 1.0 1.0 0.0
+  * java CMYKtoRGB 1.0 1.0 0.0 1.0
+  * java CMYKtoRGB 1.0 0.0 1.0 1.0
+  * java CMYKtoRGB 0.0 1.0 1.0 1.0
+  * java CMYKtoRGB 1.0 1.0 1.0 1.0
+==> passed
+
+Test 5: check that various RGB values can be generated
+  * (223, 115, 255)  Heliotrope
+  * (240, 255, 255)  Azure Mist/Web
+  * (230, 190, 138)  Pale Gold
+    - failed with command-line arguments:
+      0.0 0.17391304347826086 0.4 0.0980392156862745
+    - reference output:
+      red   = 230
+      green = 190
+      blue  = 138
+    - student output:
+      red   = 255
+      green = 211
+      blue  = 153
+  * (184, 134,  11)  Dark Goldenrod
+    - failed with command-line arguments:
+      0.0 0.2717391304347826 0.9402173913043479 0.2784313725490196
+    - reference output:
+      red   = 184
+      green = 134
+      blue  = 11
+    - student output:
+      red   = 255
+      green = 186
+      blue  = 15
+  * (136,  45,  23)  Sienna
+    - failed with command-line arguments:
+      0.0 0.6691176470588235 0.8308823529411764 0.4666666666666667
+    - reference output:
+      red   = 136
+      green = 45
+      blue  = 23
+    - student output:
+      red   = 255
+      green = 84
+      blue  = 43
+  * (181,  51, 137)  Fandango
+    - failed with command-line arguments:
+      0.0 0.718232044198895 0.24309392265193377 0.2901960784313725
+    - reference output:
+      red   = 181
+      green = 51
+      blue  = 137
+    - student output:
+      red   = 255
+      green = 72
+      blue  = 193
+==> FAILED
+
+Test 6: check that various RGB values can be generated
+  * 10 random RGB values
+    - failed with command-line arguments:
+      0.0 0.47808764940239046 0.09163346613545807 0.015686274509803977
+    - reference output:
+      red   = 251
+      green = 131
+      blue  = 228
+    - student output:
+      red   = 255
+      green = 133
+      blue  = 232
+    - failed on trial 1 of 10
+
+  * 100 random RGB values
+    - failed with command-line arguments:
+      0.0 0.9671052631578947 0.3157894736842105 0.403921568627451
+    - reference output:
+      red   = 152
+      green = 5
+      blue  = 104
+    - student output:
+      red   = 255
+      green = 8
+      blue  = 174
+    - failed on trial 1 of 100
+
+  * 1000 random RGB values
+    - failed with command-line arguments:
+      0.0 0.7450980392156864 0.4019607843137255 0.6
+    - reference output:
+      red   = 102
+      green = 26
+      blue  = 61
+    - student output:
+      red   = 0
+      green = 0
+      blue  = 0
+    - failed on trial 1 of 1000
+
+  * 10000 random RGB values
+    - failed with command-line arguments:
+      0.0 0.6010362694300518 0.45595854922279794 0.2431372549019608
+    - reference output:
+      red   = 193
+      green = 77
+      blue  = 105
+    - student output:
+      red   = 255
+      green = 102
+      blue  = 139
+    - failed on trial 1 of 10000
+
+==> FAILED
+
+Test 7: check random inputs
+  * 100 random CMYK values that are multiples of 0.5
+    - failed with command-line arguments:
+      0.5 1.0 0.5 0.5
+    - reference output:
+      red   = 64
+      green = 0
+      blue  = 64
+    - student output:
+      red   = 128
+      green = 0
+      blue  = 128
+    - failed on trial 1 of 100
+
+  * 100 random CMYK values that are multiples of 0.25
+    - failed with command-line arguments:
+      0.5 0.5 0.5 0.75
+    - reference output:
+      red   = 32
+      green = 32
+      blue  = 32
+    - student output:
+      red   = 0
+      green = 0
+      blue  = 0
+    - failed on trial 1 of 100
+
+  * 100 random CMYK values that are multiples of 0.125
+    - failed with command-line arguments:
+      0.75 0.25 0.75 0.375
+    - reference output:
+      red   = 40
+      green = 120
+      blue  = 40
+    - student output:
+      red   = 64
+      green = 191
+      blue  = 64
+    - failed on trial 2 of 100
+
+  * 1000 random CMYK values that are multiples of 0.0625
+    - failed with command-line arguments:
+      1.0 0.8125 0.125 0.625
+    - reference output:
+      red   = 0
+      green = 18
+      blue  = 84
+    - student output:
+      red   = 0
+      green = 0
+      blue  = 0
+    - failed on trial 1 of 1000
+
+  * 1000 random CMYK values that are multiples of 0.03125
+    - failed with command-line arguments:
+      0.53125 0.9375 0.25 0.90625
+    - reference output:
+      red   = 11
+      green = 1
+      blue  = 18
+    - student output:
+      red   = 0
+      green = 0
+      blue  = 0
+    - failed on trial 1 of 1000
+
+  * 1000 random CMYK values that are multiples of 0.015625
+    - failed with command-line arguments:
+      0.65625 0.453125 0.5625 0.40625
+    - reference output:
+      red   = 52
+      green = 83
+      blue  = 66
+    - student output:
+      red   = 88
+      green = 139
+      blue  = 112
+    - failed on trial 1 of 1000
+
+==> FAILED
+
+
+CMYKtoRGB Total: 3/7 tests passed!
+
+
+================================================================
