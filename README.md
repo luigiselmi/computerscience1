@@ -1,6 +1,8 @@
 Computer Science 1
 ==================
-Java programs developed for the course "Computer Science: Programming with a Purpose".
+Java programs developed for the course [Computer Science: Programming with a Purpose](https://www.coursera.org/learn/cs-programming-java/), 
+taught by Kevin Wayne and Robert Sedgewick and offered by Princeton University on Coursera. **The Java files that have been developed as solutions to the assignments are encrypted in order 
+to comply with the Coursera Honor’s Code** (see [Source Code Encryption](#Source-Code-Encryption) section).
 
 ### Compile and execute
 In order to compile the Java source files you have first to create a folder that will contain all the compiled classes. You 
