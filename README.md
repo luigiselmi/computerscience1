@@ -4,7 +4,7 @@ Java programs developed for the course [Computer Science: Programming with a Pur
 taught by Kevin Wayne and Robert Sedgewick and offered by Princeton University on Coursera. **The Java files that have been developed as solutions to the assignments are encrypted in order 
 to comply with the Coursera Honor’s Code** (see [Source Code Encryption](#Source-Code-Encryption) section).
 
-### Compile and execute
+## Compile and execute
 In order to compile the Java source files you have first to create a folder that will contain all the compiled classes. You 
 can organize the folder as with Maven, with a *target* folder and a *classes* sub-folder. From the project root folder execute
 
@@ -29,7 +29,7 @@ $ java -cp "lib/algs4.jar;target/classes" examples.week1.cs1.PlotFilter < resour
 executes the PlotFilter Java class, in the examples.week1.cs1 package, that takes in input a stream from a file containing 
 the coordinates of 13,509 cities in the United States.
 
-### Compile and execute using Maven
+## Compile and execute using Maven
 Since the software follows the Maven conventions it can be compiled and executed using Maven
 
 ```
@@ -41,4 +41,18 @@ classes. The previous example can be executed using Maven as follows
 
 ```
 $ mvn exec:java -Dexec.mainClass="examples.week1.cs1.PlotFilter" < resources/data/USA.txt
+```
+
+## Source Code Encryption
+The Java source code of the solution of the assignments has been encrypted to comply with the [Coursera Honor's Code](https://learner.coursera.help/hc/en-us/articles/209818863-Coursera-Honor-Code) using [OpenSSL](https://www.openssl.org/)
+and the Advanced Encryption Standard (AES) symmetric cipher with a 256 bits long key in CBC mode. The command for the encryption is like in the example
+
+```
+$ openssl enc -e -aes-256-cbc -in HelloWorld.java -out HelloWorld.java.enc -pass file:secret
+```
+
+where "secret" is the name of the file containing the pass-phrase. Use the next command for decryption 
+  
+```
+$ openssl enc -d -aes-256-cbc -in HelloWorld.java.enc -out HelloWorld.java -pass file:secret
 ```
