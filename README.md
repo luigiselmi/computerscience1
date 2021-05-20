@@ -59,7 +59,7 @@ The purpose of the 4th week is to learn how to use the standard input and output
 print data to the standard drawings. An interesting application is the plot of a n-by-n checkerboard where n is an integer passed by argument.
 
 ## Week 5
-The 5th week assignment is about functions than in Java can be defined as static methods.
+The 5th week assignment is about functions that in Java can be defined as static methods.
  
 ## Source Code Encryption
 The Java source code of the solution of the assignments has been encrypted to comply with the [Coursera Honor's Code](https://learner.coursera.help/hc/en-us/articles/209818863-Coursera-Honor-Code) using [OpenSSL](https://www.openssl.org/)
