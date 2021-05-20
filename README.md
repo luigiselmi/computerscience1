@@ -43,6 +43,24 @@ classes. The previous example can be executed using Maven as follows
 $ mvn exec:java -Dexec.mainClass="examples.week1.cs1.PlotFilter" < resources/data/USA.txt
 ```
 
+## Week 1
+The 1st week assignment is about some basic Java programming, such as passing arguments to a Java class, computing mathematical functions and 
+data conversion.
+
+## Week 2
+The 2nd week assignment is about loops and conditionals that are used to compute a numerical series (generalized harmonic numbers) or the Manhattan
+distance in a random walk.
+ 
+## Week 3
+The 3rd week assignment is about arrays. Among other things, they are used to present the birthday paradox.
+
+## Week 4
+The purpose of the 4th week is to learn how to use the standard input and output and how to pass data as input to a program and get the output and 
+print data to the standard drawings. An interesting application is the plot of a n-by-n checkerboard where n is an integer passed by argument.
+
+## Week 5
+The 5th week assignment is about functions than in Java are defined as static methods.
+ 
 ## Source Code Encryption
 The Java source code of the solution of the assignments has been encrypted to comply with the [Coursera Honor's Code](https://learner.coursera.help/hc/en-us/articles/209818863-Coursera-Honor-Code) using [OpenSSL](https://www.openssl.org/)
 and the Advanced Encryption Standard (AES) symmetric cipher with a 256 bits long key in CBC mode. The command for the encryption is like in the example
