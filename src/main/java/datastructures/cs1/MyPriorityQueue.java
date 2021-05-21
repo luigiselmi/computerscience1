@@ -3,8 +3,14 @@
  * A binary tree is heap-ordered when the key in 
  * each node is equal or larger than its children’s keys. 
  * A priority queue provides two main APIs:
+ * 
  * - insert
  * - remove the maximum
+ * 
+ * Both operations require a number of comparisons
+ * proportional to log(n), where n is the number of
+ * elements.
+ * 
  * @author Luigi Selmi
  */
 package datastructures.cs1;
