@@ -62,7 +62,7 @@ print data to the standard drawings. An interesting application is the plot of a
 ### Week 5
 The 5th week assignment is about functions that in Java can be defined as static methods.
 
-## Data Structures and Algorithms
+## Abstract Data Types and Algorithms
 This repository contains the implementations of some abstract data types and algorithms. The abstract data type implementations are included in
 the package datastructures.
 
