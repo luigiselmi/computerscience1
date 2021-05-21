@@ -2,7 +2,7 @@
  * Implements a FIFO collection.
  * The order is preserved. It is based on a linked list.
  */
-package datastructures.cs1;
+package cs1.datastructures;
 
 public class MyQueue<Item> {
   

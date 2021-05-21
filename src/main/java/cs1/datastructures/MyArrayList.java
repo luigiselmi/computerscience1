@@ -3,7 +3,7 @@
  * array resizing.
  * @author Luigi Selmi
  */
-package datastructures.cs1;
+package cs1.datastructures;
 
 public class MyArrayList<Item> {
 

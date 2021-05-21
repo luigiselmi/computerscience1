@@ -3,7 +3,7 @@
  * linked list.
  * @author Luigi Selmi
  */
-package datastructures.cs1;
+package cs1.datastructures;
 
 public class MyStack<Item> {
       
