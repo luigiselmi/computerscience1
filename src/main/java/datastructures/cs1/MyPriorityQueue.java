@@ -25,6 +25,7 @@ public class MyPriorityQueue<Key extends Comparable<Key>> {
    * to keep the binary tree heap-ordered.
    */
   public void insert(Key v) {
+    if (pq.length == n) resize(2 * n); // doubles the array's capacity
     pq[++n] = v;
     swim(n);
   }
@@ -40,6 +41,7 @@ public class MyPriorityQueue<Key extends Comparable<Key>> {
     exch(1, n--); // Exchange with last item.
     pq[n + 1] = null; // Avoid loitering.
     sink(1); // Restore heap property.
+    if ( n < pq.length / 4) resize(n / 2); // halves the array's capacity
     return max;
   }
   
@@ -99,6 +101,14 @@ public class MyPriorityQueue<Key extends Comparable<Key>> {
     Key t = pq[i]; 
     pq[i] = pq[j]; 
     pq[j] = t; 
+  }
+  
+  //changes the size of the array
+  private void resize(int capacity) { 
+    Key[] temp = (Key[]) new Comparable[capacity];
+    for (int i = 0; i < n; i++)
+      temp[i] = pq[i];
+    pq = temp;
   }
 
   public static void main(String[] args) {
