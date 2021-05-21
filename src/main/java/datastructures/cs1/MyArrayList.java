@@ -16,7 +16,7 @@ public class MyArrayList<Item> {
   
   // adds an item to the list
   public void add(Item item) {
-    if (a.length == N) resize(2 * N); // doubles the capacity 
+    if (a.length == N) resize(2 * N); // doubles the array's capacity 
     a[N++] = item;
   }
   
@@ -25,7 +25,7 @@ public class MyArrayList<Item> {
     if (N == 0) return null;
     Item item = a[--N];
     a[N] = null; // remove the object from memory
-    if ( N < a.length / 4) resize(N / 2); // halves the capacity
+    if ( N < a.length / 4) resize(N / 2); // halves the array's capacity
     return item;
   }
   
