@@ -19,8 +19,6 @@
  */
 package cs1.datastructures;
 
-import edu.princeton.cs.algs4.StdOut;
-
 
 public class MyIndexPriorityQueue<Key extends Comparable<Key>> {
   
@@ -132,7 +130,7 @@ public class MyIndexPriorityQueue<Key extends Comparable<Key>> {
     // deletes and prints each key in alphabetical order with its index
     while (!ipq.isEmpty()) {
         int index = ipq.delMax();
-        StdOut.println("string[" + index + "] = " + strings[index]);
+        System.out.println("string[" + index + "] = " + strings[index]);
     }
   }
 
