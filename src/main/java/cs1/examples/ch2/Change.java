@@ -1,4 +1,4 @@
-package examples.ch2.cs1;
+package cs1.examples.ch2;
 /**
  * Given an integer representing a given amount of money and 
  * a set of types of coins, e.g. 1 cent, 5 cents, 25 cents, 

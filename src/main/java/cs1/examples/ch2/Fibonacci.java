@@ -1,4 +1,4 @@
-package examples.ch2.cs1;
+package cs1.examples.ch2;
 /**
  * Implements the Fibonacci algorithm.
  */
