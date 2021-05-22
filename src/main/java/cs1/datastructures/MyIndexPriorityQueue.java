@@ -2,11 +2,11 @@
  * An index priority queue is a heap-ordered complete binary tree
  * in which each element is associated with a unique integer, or index.
  * An integer array pq is used to store the index associated to each 
- * element. The elements of the index priority queue (aka keys) are 
- * stored in a different array. Another integer array qp is used to 
- * store the position of an element's index. A binary tree is heap-ordered 
- * when the key in each node is equal or larger than its children’s keys. 
- * An index priority queue provides two main APIs:
+ * element heap-ordered. The elements of the index priority queue (aka keys) 
+ * are stored in a different array. Another integer array qp is used to 
+ * store the position of an element's index in the heap. A binary tree is 
+ * heap-ordered when the key in each node is equal or larger than its 
+ * children’s keys. An index priority queue provides two main APIs:
  * 
  * - insert a key (with its unique index)
  * - remove the maximum key
@@ -22,9 +22,9 @@ package cs1.datastructures;
 
 public class MyIndexPriorityQueue<Key extends Comparable<Key>> {
   
-  private int [] pq; // store items' indexes
+  private int [] pq; // stores items' indexes in the heap (according to the keys total order)
   private Key[] keys; // key values
-  private int[] qp; // inverse of pq: qp[pq[i]] = pq[qp[i]] = i
+  private int[] qp; // stores the position of a key's index in the heap, inverse of pq: qp[pq[i]] = pq[qp[i]] = i
   private int n; // number of items on priority queue
   
   public MyIndexPriorityQueue(int maxN) {
@@ -43,7 +43,7 @@ public class MyIndexPriorityQueue<Key extends Comparable<Key>> {
    * the comparisons between the key values (not between their indexes). 
    */
   public void insert(int index, Key key) {
-    if (contains(index)) throw new IllegalArgumentException("index is already in the priority queue");
+    if (contains(index)) throw new IllegalArgumentException("An index must be unique.");
     n++;
     qp[index] = n;
     pq[n] = index;
@@ -127,7 +127,7 @@ public class MyIndexPriorityQueue<Key extends Comparable<Key>> {
     for (int i = 0; i < strings.length; i++) {
         ipq.insert(i, strings[i]);
     }
-    // deletes and prints each key in alphabetical order with its index
+    // deletes and prints each key in alphabetical order with its original index
     while (!ipq.isEmpty()) {
         int index = ipq.delMax();
         System.out.println("string[" + index + "] = " + strings[index]);
