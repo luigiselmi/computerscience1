@@ -23,7 +23,7 @@ In order to execute a Java class, from the project root folder, you need to add 
 As an example the command 
 
 ```
-$ java -cp "lib/algs4.jar;target/classes" examples.week1.cs1.PlotFilter < resources/data/USA.txt
+$ java -cp "lib/algs4.jar;target/classes" cs1.examples.ch1.PlotFilter < src/main/resources/data/USA.txt
 ```
 
 executes the PlotFilter Java class, in the examples.week1.cs1 package, that takes in input a stream from a file containing 
@@ -40,7 +40,7 @@ When the command returns, a new *target* folder is created, as Maven's conventio
 classes. The previous example can be executed using Maven as follows
 
 ```
-$ mvn exec:java -Dexec.mainClass="examples.week1.cs1.PlotFilter" < resources/data/USA.txt
+$ java -cp "lib/algs4.jar;target/classes" cs1.examples.ch1.PlotFilter < src/main/resources/data/USA.txt
 ```
 ## Assignments
 The course has 10 assignments, one per week. The solutions are included in the assignment package.
