@@ -15,12 +15,12 @@
  */
 package cs1.datastructures;
 
-public class MyPriorityQueue<Key extends Comparable<Key>> {
+public class MyMaxPriorityQueue<Key extends Comparable<Key>> {
   
   private Key[] pq; // store items at indices 1 to n
   private int n; // number of items on priority queue
   
-  public MyPriorityQueue(int initCapacity) {
+  public MyMaxPriorityQueue(int initCapacity) {
     pq = (Key[]) new Comparable[initCapacity + 1];
     n = 0;
   }
@@ -119,7 +119,7 @@ public class MyPriorityQueue<Key extends Comparable<Key>> {
 
   public static void main(String[] args) {
     char [] data = {'T', 'N', 'R', 'P', 'O', 'A', 'E', 'I', 'H', 'G'};
-    MyPriorityQueue mypq = new MyPriorityQueue(32);
+    MyMaxPriorityQueue mypq = new MyMaxPriorityQueue(32);
     for(char l: data) {
       mypq.insert(l);
     }
