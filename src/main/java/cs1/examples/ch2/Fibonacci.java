@@ -1,14 +1,22 @@
-package cs1.examples.ch2;
 /**
- * Implements the Fibonacci algorithm.
+ * This class contains two implementation of the Fibonacci
+ * sequence. The 1st implementation is  a top-down dynamic 
+ * programming solution that uses recursion and an array 
+ * to store the computed values of the function (memoization).  
+ * The 2nd implementation is bottom-up dynamic programming
+ * solution that doesn't use recursion.
  */
+
+package cs1.examples.ch2;
+
 import edu.princeton.cs.algs4.StdOut;
 
 public class Fibonacci {
   
   private static long[] f = new long[92];
 
-  // top-down or recursive solution
+  // top-down dynamic programming 
+  // with recursive calls and memoization
   public static long fibonacci(int n) {
       if (n == 0) return 0;
       if (n == 1) return 1;

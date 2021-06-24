@@ -1,8 +1,9 @@
-package cs1.examples.ch2;
 /**
  * Computes the greatest common divisor of two integers.
  * 
  */
+package cs1.examples.ch2;
+
 import edu.princeton.cs.algs4.StdOut;
 
 public class Euclid {
