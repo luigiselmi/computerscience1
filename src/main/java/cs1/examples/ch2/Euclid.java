@@ -28,7 +28,7 @@ public class Euclid {
       int q = Integer.parseInt(args[1]);
       int d  = gcd(p, q);
       int d2 = gcd2(p, q);
-      StdOut.println("gcd(" + p + ", " + q + ") = " + d);
-      StdOut.println("gcd(" + p + ", " + q + ") = " + d2);
+      StdOut.println("Recursive gcd(" + p + ", " + q + ") = " + d);
+      StdOut.println("Non-recursive gcd(" + p + ", " + q + ") = " + d2);
   }
 }
